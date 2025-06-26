@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+      "atlasmod:pink_garnet_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "atlasmod:pink_garnet"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "atlasmod:pink_garnet_block",
+    "atlasmod:raw_pink_garnet_block",
+    "atlasmod:pink_garnet_ore",
+    "atlasmod:pink_garnet_deepslate_ore"
+  ]
+}

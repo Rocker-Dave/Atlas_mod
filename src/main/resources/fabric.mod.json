@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "atlasmod",
+	"version": "${version}",
+	"name": "Atlas Mod",
+	"description": "lol idk",
+	"authors": [
+		"RockerDave"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/atlasmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.rockerdave.atlas.AtlasMod"
+		],
+		"fabric-datagen": [
+			"net.rockerdave.atlas.AtlasModDataGenerator"
+		],
+		"client": [
+			"net.rockerdave.atlas.AtlasModClient"
+		]
+	},
+	"mixins": [
+		"atlasmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.6",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

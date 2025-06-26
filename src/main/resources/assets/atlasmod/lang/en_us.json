@@ -1,0 +1,15 @@
+{
+  "item.atlasmod.pink_garnet": "Pink Garnet",
+  "item.atlasmod.raw_pink_garnet": "Raw Pink Garnet",
+  "item.atlasmod.chisel": "Chisel",
+  "item.atlasmod.cauliflower": "Cauliflower",
+  "item.atlasmod.starlight_ashes": "Starlight Ashes",
+
+  "item.atlasmod.pink_garnet_block": "Pink Garnet Block",
+  "item.atlasmod.raw_pink_garnet_block": "Raw Pink Garnet Block",
+  "item.atlasmod.pink_garnet_ore": "Pink Garnet Ore",
+  "item.atlasmod.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
+
+  "itemgroup.atlasmod.pink_garnet_items": "Pink Garnet Items",
+  "itemgroup.atlasmod.pink_garnet_blocks": "Pink Garnet Blocks"
+}
