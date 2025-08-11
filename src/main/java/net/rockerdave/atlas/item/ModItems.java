@@ -25,6 +25,31 @@ public class ModItems {
     public static final Item CAULIFLOWER = registerItem("cauliflower", new Item(new Item.Settings().food(ModFoodComponents.CAULIFLOWER).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AtlasMod.MOD_ID,"cauliflower")))));
 
     public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AtlasMod.MOD_ID,"starlight_ashes")))));
+    //Actual ingredients
+    public static final Item FLOUR = registerItem("flour", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AtlasMod.MOD_ID,"flour")))));
+    public static final Item CRUSHED_ICE = registerItem(
+            "crushed_ice",
+            new Item(new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AtlasMod.MOD_ID, "crushed_ice"))))
+    );
+
+    public static final Item SALT = registerItem(
+            "salt",
+            new Item(new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AtlasMod.MOD_ID, "salt"))))
+    );
+
+    public static final Item PEPPER = registerItem(
+            "pepper",
+            new Item(new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AtlasMod.MOD_ID, "pepper"))))
+    );
+
+    public static final Item DOUGH = registerItem(
+            "dough",
+            new Item(new Item.Settings()
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AtlasMod.MOD_ID, "dough"))))
+    );
 
     //Helper Class
     private static Item registerItem(String name, Item item) {

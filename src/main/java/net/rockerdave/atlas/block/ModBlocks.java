@@ -2,6 +2,7 @@ package net.rockerdave.atlas.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -16,6 +17,8 @@ import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.rockerdave.atlas.AtlasMod;
 import net.minecraft.block.Block;
+import net.rockerdave.atlas.block.custom.Stovetop;
+
 import java.util.function.Function;
 
 public class ModBlocks {
@@ -63,6 +66,21 @@ public class ModBlocks {
                     .requiresTool()
                     .sounds(BlockSoundGroup.DEEPSLATE)
     );
+    public static final Block COUNTER_TOP = registerBlock(
+            "counter_top",
+            Block::new,
+            AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+    );
+    public static final Block STOVE_TOP = registerBlock(
+            "stove_top",
+            Stovetop::new,
+            AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+    );
+
 
 
 

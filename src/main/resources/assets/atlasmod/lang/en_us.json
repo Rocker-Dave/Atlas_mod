@@ -10,6 +10,18 @@
   "item.atlasmod.pink_garnet_ore": "Pink Garnet Ore",
   "item.atlasmod.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
 
+
+
   "itemgroup.atlasmod.pink_garnet_items": "Pink Garnet Items",
-  "itemgroup.atlasmod.pink_garnet_blocks": "Pink Garnet Blocks"
+  "itemgroup.atlasmod.pink_garnet_blocks": "Pink Garnet Blocks",
+
+  "itemgroup.atlasmod.cooking_ingredients": "Cooking Ingredients",
+
+  "item.atlasmod.crushed_ice": "Crushed Ice",
+  "item.atlasmod.salt": "Salt",
+  "item.atlasmod.pepper": "Pepper",
+  "item.atlasmod.dough": "Dough",
+  "item.atlasmod.counter_top": "Counter Top",
+  "item.atlasmod.flour": "Flour",
+  "item.atlasmod.stove_top": "Stove Top"
 }

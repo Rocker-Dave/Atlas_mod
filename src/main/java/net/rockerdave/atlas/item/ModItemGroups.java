@@ -35,6 +35,22 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
                         entries.add(ModBlocks.PINK_GARNET_ORE);
                         entries.add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
+                        entries.add(net.rockerdave.atlas.block.ModBlocks.COUNTER_TOP);
+                    }).build());
+
+    public static final ItemGroup COOKING_INGREDIENTS = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(AtlasMod.MOD_ID, "cooking_ingredients"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.FLOUR))
+                    .displayName(Text.translatable("itemgroup.atlasmod.cooking_ingredients"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.FLOUR);
+                        entries.add(ModItems.CRUSHED_ICE);
+                        entries.add(ModItems.SALT);
+                        entries.add(ModItems.PEPPER);
+                        entries.add(ModItems.DOUGH);
+                        entries.add(ModBlocks.COUNTER_TOP);
+                        entries.add(ModBlocks.STOVE_TOP);
+
                     }).build());
 
 
