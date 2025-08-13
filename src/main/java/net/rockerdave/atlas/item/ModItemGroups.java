@@ -50,6 +50,7 @@ public class ModItemGroups {
                         entries.add(ModItems.DOUGH);
                         entries.add(ModBlocks.COUNTER_TOP);
                         entries.add(ModBlocks.STOVE_TOP);
+                        entries.add(ModItems.ARTISAN_BREAD);
 
                     }).build());
 

@@ -40,6 +40,9 @@ public class StovetopScreenHandler extends ScreenHandler {
         // top input slot
         this.addSlot(new Slot(inventory, 0, 80, 17));
 
+        // right output slot
+        this.addSlot(new Slot(inventory, 2, 98, 35));
+
         // fuel slot
         this.addSlot(new Slot(inventory, 1, 80, 52) {
             @Override

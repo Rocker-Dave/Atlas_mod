@@ -1,6 +1,13 @@
+
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "minecraft:block/oak_planks"
+    "down":  "atlasmod:block/countertop/countertop_bottom",
+    "up":    "atlasmod:block/countertop/countertop_top",
+    "north": "atlasmod:block/countertop/countertop_side",
+    "south": "atlasmod:block/countertop/countertop_side",
+    "west":  "atlasmod:block/countertop/countertop_side",
+    "east":  "atlasmod:block/countertop/countertop_side",
+    "particle": "atlasmod:block/countertop/countertop_top"
   }
 }

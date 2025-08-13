@@ -50,6 +50,12 @@ public class ModItems {
             new Item(new Item.Settings()
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AtlasMod.MOD_ID, "dough"))))
     );
+    public static final Item ARTISAN_BREAD = registerItem(
+            "artisan_bread",
+            new Item(new Item.Settings()
+                    .food(ModFoodComponents.CAULIFLOWER)
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AtlasMod.MOD_ID, "artisan_bread"))))
+    );
 
     //Helper Class
     private static Item registerItem(String name, Item item) {

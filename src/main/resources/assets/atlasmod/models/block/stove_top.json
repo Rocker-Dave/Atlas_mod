@@ -1,6 +1,13 @@
+
 {
-  "parent": "minecraft:block/cube_all",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "all": "minecraft:block/iron_block"
+    "down":  "atlasmod:block/stovetop_top",
+    "up":    "atlasmod:block/stovetop_top",
+    "north": "atlasmod:block/stovetop_side",
+    "south": "atlasmod:block/stovetop_side",
+    "west":  "atlasmod:block/stovetop_side",
+    "east":  "atlasmod:block/stovetop_side",
+    "particle": "atlasmod:block/stovetop_top"
   }
 }
