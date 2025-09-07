@@ -48,9 +48,11 @@ public class ModItemGroups {
                         entries.add(ModItems.SALT);
                         entries.add(ModItems.PEPPER);
                         entries.add(ModItems.DOUGH);
+                        entries.add(ModItems.ARTISAN_BREAD);
                         entries.add(ModBlocks.COUNTER_TOP);
                         entries.add(ModBlocks.STOVE_TOP);
-                        entries.add(ModItems.ARTISAN_BREAD);
+                        entries.add(ModBlocks.CUTTINGBOARD);
+
 
                     }).build());
 

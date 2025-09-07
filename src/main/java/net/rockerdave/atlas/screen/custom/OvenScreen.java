@@ -7,13 +7,14 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.rockerdave.atlas.AtlasMod;
+import net.rockerdave.atlas.block.custom.Oven;
 
 //Renders the Screen texture
-public class StovetopScreen extends HandledScreen<StovetopScreenHandler> {
+public class OvenScreen extends HandledScreen<OvenScreenHandler> {
     public static final Identifier GUI_TEXTURE =
             Identifier.of(AtlasMod.MOD_ID, "textures/gui/stovetop/stovetop_gui.png");
 
-    public StovetopScreen(StovetopScreenHandler handler, PlayerInventory inventory, Text title) {
+    public OvenScreen(OvenScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
     }
 

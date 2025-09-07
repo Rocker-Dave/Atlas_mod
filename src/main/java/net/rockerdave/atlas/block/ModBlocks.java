@@ -17,6 +17,8 @@ import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.rockerdave.atlas.AtlasMod;
 import net.minecraft.block.Block;
+import net.rockerdave.atlas.block.custom.CuttingBoard;
+import net.rockerdave.atlas.block.custom.Oven;
 import net.rockerdave.atlas.block.custom.Stovetop;
 
 import java.util.function.Function;
@@ -76,6 +78,22 @@ public class ModBlocks {
     public static final Block STOVE_TOP = registerBlock(
             "stove_top",
             Stovetop::new,
+            AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+    );
+
+    public static final Block OVEN = registerBlock(
+            "oven",
+            Oven::new,
+            AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+    );
+
+    public static final Block CUTTINGBOARD = registerBlock(
+            "cuttingboard",
+            CuttingBoard::new,
             AbstractBlock.Settings.create()
                     .strength(2f)
                     .sounds(BlockSoundGroup.WOOD)

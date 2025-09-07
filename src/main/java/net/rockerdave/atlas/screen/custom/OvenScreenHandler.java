@@ -1,13 +1,11 @@
 package net.rockerdave.atlas.screen.custom;
 
 
-import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
-import net.minecraft.item.Item;
+import net.minecraft.item.FuelRegistry;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.screen.ArrayPropertyDelegate;
@@ -16,24 +14,23 @@ import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.util.math.BlockPos;
 import net.rockerdave.atlas.screen.ModScreenHandlers;
-import net.minecraft.item.FuelRegistry;
 
 
 //Actually makes the slots and stuff
-public class StovetopScreenHandler extends ScreenHandler {
+public class OvenScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final FuelRegistry fuelRegistry;
 
 
 
 
-    public StovetopScreenHandler(int syncId, PlayerInventory playerInventory, BlockPos pos) {
+    public OvenScreenHandler(int syncId, PlayerInventory playerInventory, BlockPos pos) {
         this(syncId, playerInventory, playerInventory.player.getWorld().getBlockEntity(pos), new ArrayPropertyDelegate(2));
     }
 
 
-    public StovetopScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
-        super(ModScreenHandlers.STOVETOP_SCREEN_HANDLER,syncId);
+    public OvenScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity, PropertyDelegate arrayPropertyDelegate) {
+        super(ModScreenHandlers.OVEN_SCREEN_HANDLER,syncId);
         this.inventory = ((Inventory) blockEntity);
 
         // Build the default fuel registry from the server world's registries & features

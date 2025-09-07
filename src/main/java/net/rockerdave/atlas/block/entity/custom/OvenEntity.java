@@ -9,7 +9,6 @@ import net.minecraft.inventory.Inventories;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.item.MinecartItem;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
@@ -28,10 +27,11 @@ import net.minecraft.world.World;
 import net.rockerdave.atlas.block.entity.ImplementedInventory;
 import net.rockerdave.atlas.block.entity.ModBlockEntities;
 import net.rockerdave.atlas.item.ModItems;
+import net.rockerdave.atlas.screen.custom.OvenScreenHandler;
 import net.rockerdave.atlas.screen.custom.StovetopScreenHandler;
 import org.jetbrains.annotations.Nullable;
 
-public class StovetopEntity extends BlockEntity implements ImplementedInventory, ExtendedScreenHandlerFactory<BlockPos> {
+public class OvenEntity extends BlockEntity implements ImplementedInventory, ExtendedScreenHandlerFactory<BlockPos> {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3,ItemStack.EMPTY);
     //variables
     private static final int INPUT_SLOT = 0;
@@ -43,15 +43,15 @@ public class StovetopEntity extends BlockEntity implements ImplementedInventory,
     private int maxProgress = 72;
 
 
-    public StovetopEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.STOVETOP_BE, pos, state);
+    public OvenEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntities.OVEN_BE, pos, state);
         //propertyDelegate assignment
         this.propertyDelegate = new PropertyDelegate() {
             @Override
             public int get(int index) {
                 return switch (index) {
-                    case 0 -> StovetopEntity.this.progress;
-                    case 1 -> StovetopEntity.this.maxProgress;
+                    case 0 -> OvenEntity.this.progress;
+                    case 1 -> OvenEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -59,8 +59,8 @@ public class StovetopEntity extends BlockEntity implements ImplementedInventory,
             @Override
             public void set(int index, int value) {
                 switch (index) {
-                    case 0: StovetopEntity.this.progress = value;
-                    case 1: StovetopEntity.this.maxProgress = value;
+                    case 0: OvenEntity.this.progress = value;
+                    case 1: OvenEntity.this.maxProgress = value;
                 }
             }
 
@@ -82,15 +82,15 @@ public class StovetopEntity extends BlockEntity implements ImplementedInventory,
     public void writeData(WriteView view) {
         super.writeData(view);
         Inventories.writeData(view, inventory);
-        view.putInt("stove_top.progress", progress);
-        view.putInt("stove_top.max_progress", maxProgress);
+        view.putInt("oven.progress", progress);
+        view.putInt("oven.max_progress", maxProgress);
     }
 
     @Override
     public void readData(ReadView view) {
         Inventories.readData(view, inventory);
-        progress = view.getInt("stove_top.progress", 0);
-        maxProgress = view.getInt("stove_top.max_progress", 0);
+        progress = view.getInt("oven.progress", 0);
+        maxProgress = view.getInt("oven.max_progress", 0);
         super.readData(view);
     }
     @Override
@@ -108,12 +108,12 @@ public class StovetopEntity extends BlockEntity implements ImplementedInventory,
 
     @Override
     public Text getDisplayName() {
-        return Text.literal("Stovetop");
+        return Text.literal("Oven");
     }
 
     @Override
     public @Nullable ScreenHandler createMenu(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
-        return new StovetopScreenHandler(syncId,playerInventory,this, this.propertyDelegate);
+        return new OvenScreenHandler(syncId,playerInventory,this, this.propertyDelegate);
     }
 
 
