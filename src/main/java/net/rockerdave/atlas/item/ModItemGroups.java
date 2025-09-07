@@ -51,7 +51,10 @@ public class ModItemGroups {
                         entries.add(ModItems.ARTISAN_BREAD);
                         entries.add(ModBlocks.COUNTER_TOP);
                         entries.add(ModBlocks.STOVE_TOP);
-                        entries.add(ModBlocks.CUTTINGBOARD);
+                        entries.add(ModBlocks.CUTTING_BOARD);
+                        entries.add(ModBlocks.TILE);
+                        entries.add(ModBlocks.HOOD);
+                        entries.add(ModItems.KNIFE);
 
 
                     }).build());

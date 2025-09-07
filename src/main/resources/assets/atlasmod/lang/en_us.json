@@ -22,7 +22,11 @@
   "item.atlasmod.pepper": "Pepper",
   "item.atlasmod.dough": "Dough",
   "item.atlasmod.counter_top": "Counter Top",
+  "item.atlasmod.tile": "Tile",
   "item.atlasmod.flour": "Flour",
   "item.atlasmod.stove_top": "Stove Top",
-  "item.atlasmod.artisan_bread": "Artisan Bread"
+  "item.atlasmod.artisan_bread": "Artisan Bread",
+  "item.atlasmod.hood": "Hood",
+  "item.atlasmod.cutting_board": "Cutting Board",
+  "item.atlasmod.knife": "Knife"
 }

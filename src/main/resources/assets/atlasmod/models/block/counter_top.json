@@ -1,13 +1,36 @@
-
 {
-  "parent": "minecraft:block/cube",
-  "textures": {
-    "down":  "atlasmod:block/countertop/countertop_bottom",
-    "up":    "atlasmod:block/countertop/countertop_top",
-    "north": "atlasmod:block/countertop/countertop_side",
-    "south": "atlasmod:block/countertop/countertop_side",
-    "west":  "atlasmod:block/countertop/countertop_side",
-    "east":  "atlasmod:block/countertop/countertop_side",
-    "particle": "atlasmod:block/countertop/countertop_top"
-  }
+    "parent": "minecraft:block/block",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "atlasmod:block/counter_top",
+		"particle": "atlasmod:block/counter_top"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 2],
+			"to": [16, 16, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 2]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 4], "texture": "#0"},
+				"east": {"uv": [4, 0, 8, 4], "texture": "#0"},
+				"south": {"uv": [0, 4, 4, 8], "texture": "#0"},
+				"west": {"uv": [4, 4, 8, 8], "texture": "#0"},
+				"up": {"uv": [12, 3.5, 8, 0], "texture": "#0"},
+				"down": {"uv": [12, 3.5, 8, 7.5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [0, 14, 0],
+			"to": [16, 16, 2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 14, 0]},
+			"faces": {
+				"north": {"uv": [4, 4, 7.5, 4.5], "texture": "#0"},
+				"east": {"uv": [4, 4, 4.5, 4.5], "texture": "#0"},
+				"south": {"uv": [4, 4, 7.5, 4.5], "texture": "#0"},
+				"west": {"uv": [4, 4, 4.5, 4.5], "texture": "#0"},
+				"up": {"uv": [7.5, 4.5, 4, 4], "texture": "#0"},
+				"down": {"uv": [7.5, 4, 4, 4.5], "texture": "#0"}
+			}
+		}
+	]
 }

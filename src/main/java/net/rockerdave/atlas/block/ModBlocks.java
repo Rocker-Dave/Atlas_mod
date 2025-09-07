@@ -13,13 +13,9 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.rockerdave.atlas.AtlasMod;
-import net.minecraft.block.Block;
-import net.rockerdave.atlas.block.custom.CuttingBoard;
-import net.rockerdave.atlas.block.custom.Oven;
-import net.rockerdave.atlas.block.custom.Stovetop;
+import net.rockerdave.atlas.block.custom.*;
 
 import java.util.function.Function;
 
@@ -70,19 +66,19 @@ public class ModBlocks {
     );
     public static final Block COUNTER_TOP = registerBlock(
             "counter_top",
-            Block::new,
+            counter_top::new,
             AbstractBlock.Settings.create()
                     .strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
+                    .nonOpaque()
     );
     public static final Block STOVE_TOP = registerBlock(
             "stove_top",
-            Stovetop::new,
+            Stove_top::new,
             AbstractBlock.Settings.create()
                     .strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
     );
-
     public static final Block OVEN = registerBlock(
             "oven",
             Oven::new,
@@ -90,14 +86,33 @@ public class ModBlocks {
                     .strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
     );
-
-    public static final Block CUTTINGBOARD = registerBlock(
-            "cuttingboard",
-            CuttingBoard::new,
+    public static final Block TILE = registerBlock(
+            "tile",
+            Block::new,
             AbstractBlock.Settings.create()
                     .strength(2f)
-                    .sounds(BlockSoundGroup.WOOD)
+                    .sounds(BlockSoundGroup.IRON)
+
     );
+    public static final Block HOOD = registerBlock(
+            "hood",
+            hood::new,
+            AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.IRON)
+                    .nonOpaque()
+
+    );
+    public static final Block CUTTING_BOARD = registerBlock(
+            "cutting_board",
+            cutting_board::new,
+            AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.TUFF)
+                    .nonOpaque()
+
+    );
+
 
 
 

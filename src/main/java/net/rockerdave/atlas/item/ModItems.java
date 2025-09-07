@@ -3,6 +3,7 @@ package net.rockerdave.atlas.item;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -55,6 +56,13 @@ public class ModItems {
             new Item(new Item.Settings()
                     .food(ModFoodComponents.CAULIFLOWER)
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AtlasMod.MOD_ID, "artisan_bread"))))
+    );
+    public static final Item KNIFE = registerItem(
+            "knife",
+            new Item(new Item.Settings()
+                    .sword(ToolMaterial.IRON,3,2)
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AtlasMod.MOD_ID, "knife")))
+            )
     );
 
     //Helper Class
