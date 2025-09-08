@@ -22,6 +22,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.COUNTER_TOP);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.HOOD);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.CUTTING_BOARD);
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.TOASTER);
 
 
 
@@ -40,6 +41,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PEPPER, Models.GENERATED);
         itemModelGenerator.register(ModItems.CRUSHED_ICE, Models.GENERATED);
         itemModelGenerator.register(ModItems.KNIFE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SLICED_BREAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SLICED_ARTISAN_BREAD, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TOAST, Models.GENERATED);
 
     }
 }

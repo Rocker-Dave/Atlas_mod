@@ -112,6 +112,15 @@ public class ModBlocks {
                     .nonOpaque()
 
     );
+    public static final Block TOASTER = registerBlock(
+            "toaster",
+            toaster::new,
+            AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.TUFF)
+                    .nonOpaque()
+
+    );
 
 
 

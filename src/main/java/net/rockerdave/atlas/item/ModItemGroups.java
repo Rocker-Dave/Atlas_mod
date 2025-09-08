@@ -49,9 +49,13 @@ public class ModItemGroups {
                         entries.add(ModItems.PEPPER);
                         entries.add(ModItems.DOUGH);
                         entries.add(ModItems.ARTISAN_BREAD);
+                        entries.add(ModItems.SLICED_ARTISAN_BREAD);
+                        entries.add(ModItems.SLICED_BREAD);
                         entries.add(ModBlocks.COUNTER_TOP);
                         entries.add(ModBlocks.STOVE_TOP);
                         entries.add(ModBlocks.CUTTING_BOARD);
+                        entries.add(ModItems.TOAST);
+                        entries.add(ModBlocks.TOASTER);
                         entries.add(ModBlocks.TILE);
                         entries.add(ModBlocks.HOOD);
                         entries.add(ModItems.KNIFE);

@@ -35,7 +35,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 createShaped(RecipeCategory.MISC, ModBlocks.HOOD,1)
                         .pattern(" i ")
                         .pattern("i i")
-                        .pattern("   ")
                         .input('i', Items.IRON_INGOT)
                         .criterion(hasItem(Items.IRON_INGOT), conditionsFromItem(Items.IRON_INGOT))
                         .offerTo(exporter);
@@ -52,7 +51,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 createShaped(RecipeCategory.MISC, ModBlocks.CUTTING_BOARD,1)
                         .pattern(" k ")
                         .pattern("iii")
-                        .input('i', Items.IRON_INGOT)
+                        .input('i', Items.OAK_PLANKS)
                         .input('k', ModItems.KNIFE)
                         .criterion(hasItem(ModItems.KNIFE), conditionsFromItem(ModItems.KNIFE))
                         .offerTo(exporter);

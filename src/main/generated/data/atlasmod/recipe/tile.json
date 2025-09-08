@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": "minecraft:black_concrete",
+    "w": "minecraft:white_concrete"
+  },
+  "pattern": [
+    "wb",
+    "bw"
+  ],
+  "result": {
+    "count": 4,
+    "id": "atlasmod:tile"
+  }
+}

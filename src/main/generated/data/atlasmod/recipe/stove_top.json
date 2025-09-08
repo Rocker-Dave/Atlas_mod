@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": "minecraft:cobblestone",
+    "i": "minecraft:iron_ingot"
+  },
+  "pattern": [
+    "iii",
+    "c c",
+    "ccc"
+  ],
+  "result": {
+    "count": 1,
+    "id": "atlasmod:stove_top"
+  }
+}

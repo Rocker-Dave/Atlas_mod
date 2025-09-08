@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "atlasmod:block/hood",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "atlasmod:block/hood"
+    },
+    "facing=south": {
+      "model": "atlasmod:block/hood",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atlasmod:block/hood",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "atlasmod:block/tile"
+    }
+  }
+}

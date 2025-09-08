@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "atlasmod:block/counter_top",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "atlasmod:block/counter_top"
+    },
+    "facing=south": {
+      "model": "atlasmod:block/counter_top",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "atlasmod:block/counter_top",
+      "y": 270
+    }
+  }
+}

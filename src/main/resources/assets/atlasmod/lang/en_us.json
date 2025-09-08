@@ -28,5 +28,9 @@
   "item.atlasmod.artisan_bread": "Artisan Bread",
   "item.atlasmod.hood": "Hood",
   "item.atlasmod.cutting_board": "Cutting Board",
-  "item.atlasmod.knife": "Knife"
+  "item.atlasmod.knife": "Knife",
+  "item.atlasmod.sliced_bread": "Sliced Bread",
+  "item.atlasmod.sliced_artisan_bread": "Sliced Artisan Bread",
+  "item.atlasmod.toaster": "Toaster",
+  "item.atlasmod.toast": "Toast"
 }

@@ -57,6 +57,24 @@ public class ModItems {
                     .food(ModFoodComponents.CAULIFLOWER)
                     .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AtlasMod.MOD_ID, "artisan_bread"))))
     );
+    public static final Item SLICED_BREAD = registerItem(
+            "sliced_bread",
+            new Item(new Item.Settings()
+                    .food(ModFoodComponents.CAULIFLOWER)
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AtlasMod.MOD_ID, "sliced_bread"))))
+    );
+    public static final Item SLICED_ARTISAN_BREAD = registerItem(
+            "sliced_artisan_bread",
+            new Item(new Item.Settings()
+                    .food(ModFoodComponents.CAULIFLOWER)
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AtlasMod.MOD_ID, "sliced_artisan_bread"))))
+    );
+    public static final Item TOAST = registerItem(
+            "toast",
+            new Item(new Item.Settings()
+                    .food(ModFoodComponents.CAULIFLOWER)
+                    .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(AtlasMod.MOD_ID, "toast"))))
+    );
     public static final Item KNIFE = registerItem(
             "knife",
             new Item(new Item.Settings()
