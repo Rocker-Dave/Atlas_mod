@@ -19,8 +19,8 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+
 import net.rockerdave.atlas.block.entity.custom.ToasterBlockEntity;
-import net.rockerdave.atlas.block.entity.custom.ToasterEntity;
 import org.jetbrains.annotations.Nullable;
 
 public class toaster extends BlockWithEntity {
@@ -31,7 +31,7 @@ public class toaster extends BlockWithEntity {
     @Override
     protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
 
-        ToasterEntity be = (ToasterEntity) world.getBlockEntity(pos);
+        ToasterBlockEntity be = (ToasterBlockEntity) world.getBlockEntity(pos);
         if (be == null) return ActionResult.PASS;
 
         // If holding bread and toaster is idle+empty: insert and start cooking
@@ -99,7 +99,7 @@ public class toaster extends BlockWithEntity {
 
     @Override
     public void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
+        builder.add(FACING, LIT);
     }
 
     @Override

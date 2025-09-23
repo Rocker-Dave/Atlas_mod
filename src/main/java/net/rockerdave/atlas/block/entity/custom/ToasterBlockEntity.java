@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 import net.rockerdave.atlas.block.custom.toaster;
 import net.rockerdave.atlas.block.entity.ModBlockEntities;
 
-public class ToasterEntity extends BlockEntity {
+public class ToasterBlockEntity extends BlockEntity {
     // Simple 1-slot toaster: when cooking, slot holds the "input"; when done, it holds the result
     private final DefaultedList<ItemStack> items = DefaultedList.ofSize(1, ItemStack.EMPTY);
 
@@ -22,7 +22,7 @@ public class ToasterEntity extends BlockEntity {
     private int cookTime = 0;
     private boolean cooking = false;
 
-    public ToasterEntity(BlockPos pos, BlockState state) {
+    public ToasterBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.TOASTER_BE, pos, state);
     }
 
@@ -36,7 +36,7 @@ public class ToasterEntity extends BlockEntity {
         cooking = true;
     }
 
-    public static void tick(World world, BlockPos pos, BlockState state, ToasterEntity be) {
+    public static void tick(World world, BlockPos pos, BlockState state, ToasterBlockEntity be) {
         if (!be.cooking) return;
 
         be.cookTime++;
@@ -65,19 +65,5 @@ public class ToasterEntity extends BlockEntity {
         if (world != null) world.updateListeners(pos, getCachedState(), getCachedState(), Block.NOTIFY_LISTENERS);
     }
 
-    @Override
-    public void writeData(NbtCompound nbt) {
-        super.writeData(view);
-        nbt.putBoolean("Cooking", cooking);
-        nbt.putInt("CookTime", cookTime);
-        Inventories.writeData(view, items);
-    }
 
-    @Override
-    public void readNbt(NbtCompound nbt) {
-        super.readNbt(nbt);
-        cooking = nbt.getBoolean("Cooking");
-        cookTime = nbt.getInt("CookTime");
-        Inventories.readNbt(nbt, items);
-    }
 }

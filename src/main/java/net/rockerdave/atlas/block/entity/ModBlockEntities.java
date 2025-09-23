@@ -24,7 +24,7 @@ public class ModBlockEntities {
             Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(AtlasMod.MOD_ID, "toaster_be"),
                     FabricBlockEntityTypeBuilder.create(ToasterBlockEntity::new, ModBlocks.TOASTER).build());
 
-    public static void registerBlockEntites(){
+    public static void registerBlockEntities(){
         AtlasMod.LOGGER.info("Registering Block Entities for AtlasMod");
     }
 }

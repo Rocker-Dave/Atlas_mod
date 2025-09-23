@@ -21,7 +21,7 @@ public class AtlasMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registermodblocks();
 		ModItemGroups.registerItemGroups();
-        ModBlockEntities.registerBlockEntites();
+        ModBlockEntities.registerBlockEntities();
         ModScreenHandlers.registerScreenHandlers();
 
 		FuelRegistryEvents.BUILD.register(((builder, context) -> {
