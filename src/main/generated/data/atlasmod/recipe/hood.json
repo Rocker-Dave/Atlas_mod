@@ -6,8 +6,7 @@
   },
   "pattern": [
     " i ",
-    "i i",
-    "   "
+    "i i"
   ],
   "result": {
     "count": 1,

@@ -1,6 +1,7 @@
 package net.rockerdave.atlas.block.entity.custom;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -9,7 +10,6 @@ import net.minecraft.inventory.Inventories;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.item.MinecartItem;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.listener.ClientPlayPacketListener;
 import net.minecraft.network.packet.Packet;
@@ -25,11 +25,14 @@ import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.rockerdave.atlas.block.custom.Stove_top;
 import net.rockerdave.atlas.block.entity.ImplementedInventory;
 import net.rockerdave.atlas.block.entity.ModBlockEntities;
 import net.rockerdave.atlas.item.ModItems;
 import net.rockerdave.atlas.screen.custom.StovetopScreenHandler;
 import org.jetbrains.annotations.Nullable;
+
+import static net.rockerdave.atlas.block.custom.Stove_top.LIT;
 
 public class StovetopEntity extends BlockEntity implements ImplementedInventory, ExtendedScreenHandlerFactory<BlockPos> {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(3,ItemStack.EMPTY);
@@ -134,18 +137,39 @@ public class StovetopEntity extends BlockEntity implements ImplementedInventory,
 
 
     public void tick(World world, BlockPos pos, BlockState state) {
-        if(hasRecipe()) {
+        if(hasBreadRecipe()) {
             increaseCraftingProgress();
             markDirty(world, pos, state);
+            world.setBlockState(pos,state.with(LIT, true));
+            state = world.getBlockState(pos);
 
             if(hasCraftingFinished()) {
                 craftItem();
                 resetProgress();
+                
             }
         } else {
             resetProgress();
         }
+        updateLitWhenInputEmpty();
+        
 
+
+    }
+
+    private void updateLitWhenInputEmpty() {
+        if (world == null || world.isClient) return;
+
+        if (this.getStack(INPUT_SLOT).isEmpty()) {
+            BlockState state = world.getBlockState(pos);
+
+            // Only flip if the property exists and is currently true
+            if (state.contains(Stove_top.LIT) && state.get(Stove_top.LIT)) {
+                world.setBlockState(pos, state.with(Stove_top.LIT, false), Block.NOTIFY_LISTENERS);
+                // optional: sync UI/clients if you maintain a helper
+                // markDirtyAndSync();
+            }
+        }
     }
 
     private void resetProgress() {
@@ -170,7 +194,7 @@ public class StovetopEntity extends BlockEntity implements ImplementedInventory,
         this.progress++;
     }
 
-    private boolean hasRecipe() {
+    private boolean hasBreadRecipe() {
         Item input = ModItems.DOUGH;
         Item fuel1 = Items.COAL;
         Item fuel2 = Items.CHARCOAL;

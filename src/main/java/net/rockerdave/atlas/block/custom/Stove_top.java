@@ -10,7 +10,9 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -25,8 +27,12 @@ import org.jetbrains.annotations.Nullable;
 
 
 public class Stove_top extends BlockWithEntity implements BlockEntityProvider {
+    public static final BooleanProperty LIT = Properties.LIT;
     public Stove_top(Settings settings) {
         super(settings);
+        setDefaultState(getDefaultState()
+                .with(LIT, false));
+
     }
     public static final MapCodec<Stove_top> CODEC = Stove_top.createCodec(Stove_top::new);
 
@@ -35,6 +41,7 @@ public class Stove_top extends BlockWithEntity implements BlockEntityProvider {
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING);
+        builder.add(LIT);
     }
 
     @Override

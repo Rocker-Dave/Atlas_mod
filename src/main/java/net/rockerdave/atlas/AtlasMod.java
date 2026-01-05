@@ -25,7 +25,7 @@ public class AtlasMod implements ModInitializer {
         ModScreenHandlers.registerScreenHandlers();
 
 		FuelRegistryEvents.BUILD.register(((builder, context) -> {
-			builder.add(ModItems.STARLIGHT_ASHES, 200);
+			//builder.add(ModItems.STARLIGHT_ASHES, 200);
 		}));
 		LOGGER.info("Hello Fabric world!");
 	}

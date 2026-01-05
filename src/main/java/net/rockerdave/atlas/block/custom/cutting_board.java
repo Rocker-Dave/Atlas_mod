@@ -27,30 +27,7 @@ public class cutting_board extends HorizontalFacingBlock {
 
 
 
-    @Override
-    protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        //Normal Bread
-        if (stack.isOf(Items.BREAD)){
-            stack.decrement(1);
-            player.giveItemStack(new ItemStack(ModItems.SLICED_BREAD,2));
 
-
-            return ActionResult.SUCCESS;
-
-        }
-        //Artisan Bread
-        else if (stack.isOf(ModItems.ARTISAN_BREAD)){
-            stack.decrement(1);
-            player.giveItemStack(new ItemStack(ModItems.SLICED_ARTISAN_BREAD,2));
-
-
-            return ActionResult.SUCCESS;
-
-        }
-
-
-        else {return ActionResult.FAIL;}
-    }
     //voxel shape outline
     private static final VoxelShape SHAPE_N = Block.createCuboidShape(1, 0, 2, 15, 1, 14); // facing NORTH
     private static final VoxelShape SHAPE_E = Block.createCuboidShape(2, 0, 1, 14, 1, 15);

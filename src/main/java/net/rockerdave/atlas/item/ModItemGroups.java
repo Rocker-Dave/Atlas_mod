@@ -13,31 +13,7 @@ import net.rockerdave.atlas.block.ModBlocks;
 
 
 public class ModItemGroups {
-
-    public static final ItemGroup PINK_GARNET_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(AtlasMod.MOD_ID, "pink_garnet_items"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.PINK_GARNET))
-                    .displayName(Text.translatable("itemgroup.atlasmod.pink_garnet_items"))
-                    .entries((displayContext, entries) -> {
-                        entries.add(ModItems.PINK_GARNET);
-                        entries.add(ModItems.RAW_PINK_GARNET);
-                        entries.add(ModItems.CHISEL);
-                        entries.add(ModItems.CAULIFLOWER);
-                        entries.add(ModItems.STARLIGHT_ASHES);
-                    }).build());
-
-    public static final ItemGroup PINK_GARNET_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(AtlasMod.MOD_ID, "pink_garnet_blocks"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.PINK_GARNET_BLOCK))
-                    .displayName(Text.translatable("itemgroup.atlasmod.pink_garnet_blocks"))
-                    .entries((displayContext, entries) -> {
-                        entries.add(ModBlocks.PINK_GARNET_BLOCK);
-                        entries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
-                        entries.add(ModBlocks.PINK_GARNET_ORE);
-                        entries.add(ModBlocks.PINK_GARNET_DEEPSLATE_ORE);
-                        entries.add(net.rockerdave.atlas.block.ModBlocks.COUNTER_TOP);
-                    }).build());
-
+    //Items Group
     public static final ItemGroup COOKING_INGREDIENTS = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(AtlasMod.MOD_ID, "cooking_ingredients"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.FLOUR))
@@ -51,15 +27,28 @@ public class ModItemGroups {
                         entries.add(ModItems.ARTISAN_BREAD);
                         entries.add(ModItems.SLICED_ARTISAN_BREAD);
                         entries.add(ModItems.SLICED_BREAD);
+                        entries.add(ModItems.TOAST);
+                        entries.add(ModItems.KNIFE);
+                        entries.add(ModItems.RAW_GROUND_BEEF);
+                        entries.add(ModItems.COOKED_GROUND_BEEF);
+                        entries.add(ModItems.CHEESE);
+                        entries.add(ModItems.RAW_BACON);
+                        entries.add(ModItems.COOKED_BACON);
+
+
+                    }).build());
+
+    //Blocks Group
+    public static final ItemGroup COOKING_BLOCKS = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(AtlasMod.MOD_ID, "cooking_blocks"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.TILE))
+                    .displayName(Text.translatable("itemgroup.atlasmod.cooking_blocks"))
+                    .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.COUNTER_TOP);
                         entries.add(ModBlocks.STOVE_TOP);
                         entries.add(ModBlocks.CUTTING_BOARD);
-                        entries.add(ModItems.TOAST);
-                        entries.add(ModBlocks.TOASTER);
                         entries.add(ModBlocks.TILE);
                         entries.add(ModBlocks.HOOD);
-                        entries.add(ModItems.KNIFE);
-
 
                     }).build());
 

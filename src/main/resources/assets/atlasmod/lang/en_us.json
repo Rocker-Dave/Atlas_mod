@@ -1,21 +1,6 @@
 {
-  "item.atlasmod.pink_garnet": "Pink Garnet",
-  "item.atlasmod.raw_pink_garnet": "Raw Pink Garnet",
-  "item.atlasmod.chisel": "Chisel",
-  "item.atlasmod.cauliflower": "Cauliflower",
-  "item.atlasmod.starlight_ashes": "Starlight Ashes",
-
-  "item.atlasmod.pink_garnet_block": "Pink Garnet Block",
-  "item.atlasmod.raw_pink_garnet_block": "Raw Pink Garnet Block",
-  "item.atlasmod.pink_garnet_ore": "Pink Garnet Ore",
-  "item.atlasmod.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
-
-
-
-  "itemgroup.atlasmod.pink_garnet_items": "Pink Garnet Items",
-  "itemgroup.atlasmod.pink_garnet_blocks": "Pink Garnet Blocks",
-
   "itemgroup.atlasmod.cooking_ingredients": "Cooking Ingredients",
+  "itemgroup.atlasmod.cooking_blocks": "Cooking Blocks",
 
   "item.atlasmod.crushed_ice": "Crushed Ice",
   "item.atlasmod.salt": "Salt",
@@ -32,5 +17,10 @@
   "item.atlasmod.sliced_bread": "Sliced Bread",
   "item.atlasmod.sliced_artisan_bread": "Sliced Artisan Bread",
   "item.atlasmod.toaster": "Toaster",
-  "item.atlasmod.toast": "Toast"
+  "item.atlasmod.toast": "Toast",
+  "item.atlasmod.raw_ground_beef": "Raw Ground Beef",
+  "item.atlasmod.cooked_ground_beef": "Cooked Ground Beef",
+  "item.atlasmod.cheese": "Cheese",
+  "item.atlasmod.cooked_bacon": "Cooked Bacon",
+  "item.atlasmod.raw_bacon": "Raw Bacon"
 }

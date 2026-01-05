@@ -22,7 +22,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.COUNTER_TOP);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.HOOD);
         blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.CUTTING_BOARD);
-        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(ModBlocks.TOASTER);
+
 
 
 
@@ -30,11 +30,10 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(ModItems.PINK_GARNET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.RAW_PINK_GARNET, Models.GENERATED);
+
 
         itemModelGenerator.register(ModItems.ARTISAN_BREAD, Models.GENERATED);
-        itemModelGenerator.register(ModItems.CAULIFLOWER, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.DOUGH, Models.GENERATED);
         itemModelGenerator.register(ModItems.FLOUR, Models.GENERATED);
         itemModelGenerator.register(ModItems.SALT, Models.GENERATED);
@@ -44,6 +43,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SLICED_BREAD, Models.GENERATED);
         itemModelGenerator.register(ModItems.SLICED_ARTISAN_BREAD, Models.GENERATED);
         itemModelGenerator.register(ModItems.TOAST, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_GROUND_BEEF, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_GROUND_BEEF, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHEESE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COOKED_BACON, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_BACON, Models.GENERATED);
 
     }
 }

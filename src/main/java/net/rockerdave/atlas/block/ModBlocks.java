@@ -79,13 +79,7 @@ public class ModBlocks {
                     .strength(2f)
                     .sounds(BlockSoundGroup.WOOD)
     );
-    public static final Block OVEN = registerBlock(
-            "oven",
-            Oven::new,
-            AbstractBlock.Settings.create()
-                    .strength(2f)
-                    .sounds(BlockSoundGroup.WOOD)
-    );
+
     public static final Block TILE = registerBlock(
             "tile",
             Block::new,
@@ -112,15 +106,7 @@ public class ModBlocks {
                     .nonOpaque()
 
     );
-    public static final Block TOASTER = registerBlock(
-            "toaster",
-            toaster::new,
-            AbstractBlock.Settings.create()
-                    .strength(2f)
-                    .sounds(BlockSoundGroup.TUFF)
-                    .nonOpaque()
 
-    );
 
 
 
