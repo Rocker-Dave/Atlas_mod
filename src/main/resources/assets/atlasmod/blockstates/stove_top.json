@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "facing=north,lit=false": { "model": "atlasmod:block/stove_top" },
+    "facing=south,lit=false": { "model": "atlasmod:block/stove_top", "y": 180 },
+    "facing=west,lit=false":  { "model": "atlasmod:block/stove_top", "y": 270 },
+    "facing=east,lit=false":  { "model": "atlasmod:block/stove_top", "y": 90 },
+
+    "facing=north,lit=true": { "model": "atlasmod:block/lit_stove_top" },
+    "facing=south,lit=true": { "model": "atlasmod:block/lit_stove_top", "y": 180 },
+    "facing=west,lit=true":  { "model": "atlasmod:block/lit_stove_top", "y": 270 },
+    "facing=east,lit=true":  { "model": "atlasmod:block/lit_stove_top", "y": 90 }
+  }
+}
